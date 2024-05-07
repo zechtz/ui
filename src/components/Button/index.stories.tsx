@@ -8,6 +8,26 @@ const meta: Meta<typeof Button> = {
     layout: "centered",
   },
   tags: ["autodocs"],
+  argTypes: {
+    variant: {
+      control: {
+        type: "radio",
+        options: ["solid", "outline", "ghost"],
+      },
+    },
+    colorscheme: {
+      control: {
+        type: "radio",
+        options: ["primary", "secondary", "danger"],
+      },
+    },
+    size: {
+      control: {
+        type: "radio",
+        options: ["sm", "md", "lg"],
+      },
+    },
+  },
 };
 
 export default meta;
