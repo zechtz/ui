@@ -2,30 +2,26 @@ import { Meta, StoryObj } from "@storybook/react";
 import Button from ".";
 
 const meta: Meta<typeof Button> = {
-  title: "Components/Button",
   component: Button,
+  title: "Components/Button",
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {
     variant: {
-      control: {
-        type: "radio",
-        options: ["solid", "outline", "ghost"],
-      },
+      control: { type: "radio" },
+      options: ["solid", "outline", "ghost"],
     },
     colorscheme: {
-      control: {
-        type: "radio",
-        options: ["primary", "secondary", "danger"],
-      },
+      control: { type: "radio" },
+      defaultValue: "primary",
+      options: ["primary", "secondary", "danger"],
     },
     size: {
-      control: {
-        type: "radio",
-        options: ["sm", "md", "lg"],
-      },
+      control: { type: "radio" },
+      defaultValue: "lg",
+      options: ["sm", "md", "lg"],
     },
   },
 };

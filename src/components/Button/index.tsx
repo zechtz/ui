@@ -6,7 +6,7 @@ const buttonStyles = cva(
   [
     "w-full",
     "rounded-md",
-    "font-semibold",
+    "font-normal",
     "focus:outline-none",
     "disabled:cursor-not-allowed",
   ],
@@ -14,7 +14,7 @@ const buttonStyles = cva(
     variants: {
       variant: {
         solid: "",
-        outline: "border-2",
+        outline: "border",
         ghost: "transition-colors duration-300",
       },
       size: {
