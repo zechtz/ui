@@ -1,7 +1,7 @@
 import { VariantProps, cva } from "class-variance-authority";
 import { ComponentPropsWithRef, ElementType, forwardRef } from "react";
 
-const textStyles = cva("w-full", {
+const typographyStyles = cva("w-full", {
   variants: {
     tag: {
       span: "text-base",
@@ -54,12 +54,12 @@ const textStyles = cva("w-full", {
   },
 });
 
-type TextProps = ComponentPropsWithRef<"span"> &
-  VariantProps<typeof textStyles> & {
+type TypographyProps = ComponentPropsWithRef<"span"> &
+  VariantProps<typeof typographyStyles> & {
     as?: ElementType;
   };
 
-export const Text = forwardRef<HTMLSpanElement, TextProps>(
+export const Typography = forwardRef<HTMLSpanElement, TypographyProps>(
   ({ as: Component = "span", ...props }, ref) => {
     return <Component {...props} ref={ref} />;
   },
