@@ -27,28 +27,28 @@ Ensure you have the following installed:
 
 To use the components in your project, add the library to your project by running:
 
-````bash
+```bash
 npm install ui-library
+```
 
 ### Usage
 
 Here's how to use the components in your react project
 
 ```js
-import { Button, Light, StarRating, Typography } from 'ui-library';
+import { Button, Light, StarRating, Typography } from "ui-library";
 
 function App() {
   return (
     <div>
-      <Typography variant="h1">Welcome to My Library</Typography>
+      <Typography as="h1">Welcome to My Library</Typography>
       <Button onClick={() => console.log("Clicked!")}>Click Me!</Button>
-      <StarRating rating={4} />
+      <StarRating rating={4} onSetRating={(rating) => console.log(rating)} />
       <Light />
     </div>
   );
 }
-
-````
+```
 
 ### Running Storybook
 
@@ -57,5 +57,9 @@ To view and interact with the components locally via Storybook, clone the reposi
 ```bash
 npm install
 npm run storybook
+
+```
+
+```
 
 ```
