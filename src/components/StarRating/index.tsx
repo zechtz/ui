@@ -5,14 +5,14 @@ type Props = {
   rating: number;
   maxStars: number;
   title?: string;
-  onSetRating: (rating: number) => void;
+  onRatingSet: (rating: number) => void;
 };
 
 const StarRating = ({
   rating: initialRating,
   maxStars = 5,
   title = "How Would You Rate Our App Experience?",
-  onSetRating,
+  onRatingSet: onRatingSet,
 }: Props) => {
   const [rating, setRating] = useState(initialRating);
 
@@ -44,7 +44,7 @@ const StarRating = ({
           ))}
         </div>
         <button
-          onClick={() => onSetRating(rating)}
+          onClick={() => onRatingSet(rating)}
           className="mt-6 w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
         >
           Submit

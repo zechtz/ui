@@ -9,7 +9,7 @@ const meta: Meta<typeof StarRating> = {
     maxStars: 5,
   },
   argTypes: {
-    onSetRating: { action: "onSetRating" },
+    onRatingSet: { action: "onRatingSet" },
   },
 };
 
@@ -19,6 +19,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Base: Story = {
   args: {
-    onSetRating: (rating: number) => console.log(rating),
+    onRatingSet: (rating: number) => console.log(rating),
   },
 };
