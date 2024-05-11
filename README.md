@@ -1,30 +1,58 @@
-# React + TypeScript + Vite
+# My React UI Component Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my React UI Component Library, a collection of reusable React components styled with TailwindCSS and showcased with Storybook. This library aims to provide easily integrable UI elements for your projects.
 
-Currently, two official plugins are available:
+## Components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This library includes the following components:
 
-## Expanding the ESLint configuration
+- **Button**: Customizable buttons for user interactions.
+- **Light**: A component to toggle light/dark themes.
+- **StarRating**: Allows users to rate items using a star system.
+- **Typography**: Provides styled typographic elements.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (v12.0 or higher recommended)
+- npm (v6.0 or higher)
+
+### Installation
+
+To use the components in your project, add the library to your project by running:
+
+````bash
+npm install ui-library
+
+### Usage
+
+Here's how to use the components in your react project
 
 ```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+import { Button, Light, StarRating, Typography } from 'ui-library';
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+function App() {
+  return (
+    <div>
+      <Typography variant="h1">Welcome to My Library</Typography>
+      <Button onClick={() => console.log("Clicked!")}>Click Me!</Button>
+      <StarRating rating={4} />
+      <Light />
+    </div>
+  );
+}
+
+````
+
+### Running Storybook
+
+To view and interact with the components locally via Storybook, clone the repository and run:
+
+```bash
+npm install
+npm run storybook
+
+```
