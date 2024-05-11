@@ -1,5 +1,8 @@
 # My React UI Component Library
 
+**Note**
+The libraries are still under construction
+
 Welcome to my React UI Component Library, a collection of reusable React components styled with TailwindCSS and showcased with Storybook. This library aims to provide easily integrable UI elements for your projects.
 
 ## Components
