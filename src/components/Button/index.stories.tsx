@@ -10,16 +10,16 @@ const meta: Meta<typeof Button> = {
   tags: ["autodocs"],
   argTypes: {
     variant: {
-      control: { type: "radio" },
+      control: { type: "inline-radio" },
       options: ["solid", "outline", "ghost"],
     },
     colorscheme: {
-      control: { type: "radio" },
+      control: { type: "inline-radio" },
       defaultValue: "primary",
       options: ["primary", "secondary", "danger"],
     },
     size: {
-      control: { type: "radio" },
+      control: { type: "inline-radio" },
       defaultValue: "lg",
       options: ["sm", "md", "lg"],
     },
