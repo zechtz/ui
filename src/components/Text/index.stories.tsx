@@ -7,6 +7,12 @@ const meta: Meta<typeof Text> = {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    as: {
+      control: { type: "select" },
+      options: ["h1", "h2", "h3", "h4", "h5", "span", "p"],
+    },
+  },
   tags: ["autodocs"],
 };
 
@@ -15,7 +21,21 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children:
-      "be parts correct potatoes dides donkey extra climate happily freedom relationship type unit tall hung call cat window steady world front graph particular pick",
+    children: "This is default text.",
+    as: "span",
+  },
+};
+
+export const Heading: Story = {
+  args: {
+    children: "This is a heading.",
+    as: "h1",
+  },
+};
+
+export const Paragraph: Story = {
+  args: {
+    children: "This is a paragraph.",
+    as: "p",
   },
 };
