@@ -31,4 +31,12 @@ export default {
     },
   },
   plugins: [],
+  safelist: [
+    {
+      pattern: /grid-cols-\d+/,
+    },
+    {
+      pattern: /gap-\d+/,
+    },
+  ],
 };
