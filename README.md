@@ -13,6 +13,9 @@ This library includes the following components:
 - **Light**: A component to toggle light/dark themes.
 - **StarRating**: Allows users to rate items using a star system.
 - **Typography**: Provides styled typographic elements.
+- **Fetcher**: A headless component that uses render props to fetch data from an API
+- **DualMultiselect**: A component for moving data between two options
+- **Code**: A component for displaying code blocks
 
 ## Getting Started
 
