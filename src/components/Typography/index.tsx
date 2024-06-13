@@ -43,14 +43,14 @@ const typographyStyles = cva("w-full", {
     underline: {
       true: "underline underline-offset-2",
     },
-    defaultVariants: {
-      emphasis: "low",
-      size: "base",
-      weight: "normal",
-      align: "left",
-      italic: false,
-      underline: false,
-    },
+  },
+  defaultVariants: {
+    emphasis: "low",
+    size: "base",
+    weight: "normal",
+    align: "left",
+    italic: false,
+    underline: false,
   },
 });
 
@@ -60,7 +60,10 @@ type TypographyProps = ComponentPropsWithRef<"span"> &
   };
 
 export const Typography = forwardRef<HTMLSpanElement, TypographyProps>(
-  ({ as: Component = "span", ...props }, ref) => {
-    return <Component {...props} ref={ref} />;
+  ({ as: Component = "span", className, ...props }, ref) => {
+    const classes = typographyStyles(props);
+    return (
+      <Component className={`${classes} ${className}`} {...props} ref={ref} />
+    );
   },
 );
