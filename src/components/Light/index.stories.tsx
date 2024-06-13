@@ -7,7 +7,7 @@ const meta: Meta<typeof Light> = {
   tags: ["autodocs"],
   argTypes: {
     variant: {
-      control: { type: "radio" },
+      control: { type: "inline-radio" },
       options: ["green", "yellow", "red"],
     },
   },

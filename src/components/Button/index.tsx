@@ -18,12 +18,12 @@ const buttonStyles = cva(
         ghost: "transition-colors duration-300",
       },
       size: {
-        sm: "px-4 py-1 text-sm",
-        md: "px-4 py-2 text-base",
-        lg: "px-6 py-3 text-lg",
+        sm: "px-4 py-1 text-sm font-semibold",
+        md: "px-4 py-2 text-base font-semibold",
+        lg: "px-6 py-3 text-lg font-semibold",
       },
       colorscheme: {
-        primary: "bg-blue-500 text-white",
+        primary: "bg-primary-500 text-white",
         secondary: "bg-gray-500 text-white",
         danger: "bg-red-500 text-white",
       },
