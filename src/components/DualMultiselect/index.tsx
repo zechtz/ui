@@ -232,7 +232,7 @@ const DualMultiSelect: FC<Props> = (props) => {
         </div>
         <div className="flex flex-col justify-between items-center w-18 gap-1 mt-6 p-2">
           <button
-            className={`${state.itemsToSelect.length < 1 ? "bg-gray-500 hover:bg-gray-500" : "bg-primary-500"} hover:bg-primary-400 transition-all w-full p-2 rounded-sm`}
+            className={`${state.itemsToSelect.length < 1 ? "bg-gray-400 hover:bg-gray-400" : "bg-primary-500 hover:bg-primary-400"} transition-all w-full p-2 rounded-sm`}
             disabled={state.itemsToSelect.length < 1}
             onClick={addItems}
           >
@@ -240,7 +240,7 @@ const DualMultiSelect: FC<Props> = (props) => {
           </button>
 
           <button
-            className={`${state.itemsToRemove.length < 1 ? "bg-gray-500 hover:bg-gray-500" : "bg-primary-500"} hover:bg-primary-400 transition-all w-full p-2 rounded-sm`}
+            className={`${state.itemsToRemove.length < 1 ? "bg-gray-400 hover:bg-gray-400" : "bg-primary-500 hover:bg-primary-400"} transition-all w-full p-2 rounded-sm`}
             disabled={state.itemsToRemove.length < 1}
             onClick={removeItems}
           >
@@ -248,13 +248,15 @@ const DualMultiSelect: FC<Props> = (props) => {
           </button>
 
           <button
-            className="bg-primary-400 hover:bg-primary-400 transition-all w-full p-2 rounded-sm"
+            className={`${state.items.length === 0 ? "bg-gray-400 hover:bg-gray-400" : "bg-primary-400 hover:bg-primary-400"} transition-all w-full p-2 rounded-sm`}
+            disabled={state.items.length === 0}
             onClick={addAll}
           >
             <HiChevronDoubleRight className="h-5 w-5 text-white" />
           </button>
           <button
-            className="bg-primary-400 hover:bg-primary-400 transition-all w-full p-2 rounded-sm"
+            className={`${state.selectedItems.length === 0 ? "bg-gray-400 hover:bg-gray-400" : "bg-primary-400 hover:bg-primary-400"} transition-all w-full p-2 rounded-sm`}
+            disabled={state.selectedItems.length === 0}
             onClick={removeAll}
           >
             <HiChevronDoubleLeft className="h-5 w-5 text-white" />
