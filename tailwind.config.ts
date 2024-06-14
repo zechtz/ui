@@ -56,5 +56,9 @@ export default {
         /^(stroke|text|w|h)-(gray|red|yellow|green|blue|indigo|purple|pink|black|white|current|transparent|[0-9]+)-[0-9]{1,3}$/,
       variants: ["responsive", "hover", "focus", "active"],
     },
+    {
+      pattern: /^(bg|text|hover:bg|ring|w|h)-(gray|red|yellow|green|blue|indigo|purple|pink|black|white|current|transparent|orange)-[0-9]{1,3}$/,
+      variants: ['responsive', 'hover', 'focus', 'active'],
+    },
   ],
 };
