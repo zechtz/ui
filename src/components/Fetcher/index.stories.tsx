@@ -21,6 +21,7 @@ const Template: FetcherStory = (args) => <Fetcher {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   api: "https://jsonplaceholder.typicode.com/posts",
+  defaultParams: { userId: 1 },
   render: (response) => (
     <div>
       {response.loading && <p>Loading...</p>}
@@ -37,6 +38,7 @@ Default.parameters = {
         <Fetcher
           api="https://jsonplaceholder.typicode.com/posts"
           loadingLabel="Loading posts"
+          defaultParams={{userId: 1}}
           render={({ loading, json }) =>
             loading ? "Loading...." : <pre>{JSON.stringify(json, null, 4)}</pre>
           }
