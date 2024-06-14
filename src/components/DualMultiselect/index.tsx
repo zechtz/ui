@@ -198,7 +198,7 @@ const DualMultiSelect: FC<Props> = (props) => {
       <div className="flex items-center py-4 relative">
         <input
           type="text"
-          className="border border-gray-300 bg-white rounded-md p-2 w-full focus:outline-none"
+          className="border border-gray-400 bg-white rounded-md p-2 w-full focus:outline-none"
           placeholder={props.filterLabel ? props.filterLabel : "Filter items..."}
           onKeyDown={(e) => clearFilter(e.keyCode)}
           onChange={(event) => filterItems(event.target.value)}
