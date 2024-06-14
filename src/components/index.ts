@@ -5,6 +5,8 @@ export * from "./DualMultiselect";
 export * from "./Fetcher";
 export * from "./Flex";
 export * from "./Grid";
+export * from "./Button";
+export * from "./LanguageSwitcher";
 export * from "./Light";
 export * from "./Preloader";
 export * from "./StarRating";
