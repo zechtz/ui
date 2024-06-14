@@ -28,7 +28,7 @@ const Preloader: FC<PreloaderProps> = ({
   loaderColor = "gray-500",
   textColor = "gray-500",
   isLoading = true,
-  size = "20",
+  size = "8",
 }) => {
   if (!isLoading) return null;
 

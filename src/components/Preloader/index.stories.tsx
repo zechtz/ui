@@ -62,5 +62,5 @@ Default.args = {
   loaderColor: "gray-500",
   textColor: "gray-500",
   isLoading: true,
-  size: "20",
+  size: "12",
 };
