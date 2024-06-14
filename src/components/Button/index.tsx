@@ -1,71 +1,50 @@
-import { ComponentProps, forwardRef } from "react";
-import { VariantProps, cva } from "class-variance-authority";
-import { cn } from "../../utils";
+import { FC, ReactNode } from 'react';
 
-const buttonStyles = cva(
-  [
-    "w-full",
-    "rounded-md",
-    "font-normal",
-    "focus:outline-none",
-    "disabled:cursor-not-allowed",
-  ],
-  {
-    variants: {
-      variant: {
-        solid: "",
-        outline: "border",
-        ghost: "transition-colors duration-300",
-      },
-      size: {
-        sm: "px-4 py-1 text-sm font-semibold",
-        md: "px-4 py-2 text-base font-semibold",
-        lg: "px-6 py-3 text-lg font-semibold",
-      },
-      colorscheme: {
-        primary: "bg-primary-500 text-white",
-        secondary: "bg-gray-500 text-white",
-        danger: "bg-red-500 text-white",
-      },
-    },
-    compoundVariants: [
-      {
-        variant: "solid",
-        colorscheme: "primary",
-        className: "bg-primary-500 hover:bg-primary-600",
-      },
-      {
-        variant: "outline",
-        colorscheme: "primary",
-        className:
-          "text-primary-600 border-primary-500 bg-transparent hover:bg-primary-100",
-      },
-      {
-        variant: "ghost",
-        colorscheme: "primary",
-        className: "text-primary-600 bg-transparent hover:bg-primary-100",
-      },
-    ],
-    defaultVariants: {
-      variant: "solid",
-      size: "md",
-      colorscheme: "primary",
-    },
-  },
-);
+export interface ButtonProps {
+  children: ReactNode;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
+  onClick?: () => void;
+  color?: 'primary' | 'secondary' | 'warn' | 'error';
+  variant?: 'solid' | 'outline' | 'ghost';
+}
 
-type ButtonProps = ComponentProps<"button"> & VariantProps<typeof buttonStyles>;
+const colorClasses = {
+  primary: 'bg-blue-500 text-white hover:bg-blue-600 border-blue-500',
+  secondary: 'bg-gray-500 text-white hover:bg-gray-600 border-gray-500',
+  warn: 'bg-yellow-500 text-white hover:bg-yellow-600 border-yellow-500',
+  error: 'bg-red-500 text-white hover:bg-red-600 border-red-500',
+};
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant, size, colorscheme, className, ref, ...props }) => {
-    return (
-      <button
-        className={cn(buttonStyles({ variant, size, colorscheme, className }))}
-        ref={ref}
-        {...props}
-      />
-    );
-  },
-);
+const variantClasses = {
+  solid: '',
+  outline: 'bg-transparent text-current hover:bg-gray-200',
+  ghost: 'bg-transparent text-current hover:bg-gray-100 border-none',
+};
+
+const Button: FC<ButtonProps> = ({
+  children,
+  startIcon,
+  endIcon,
+  onClick,
+  color = 'primary',
+  variant = 'solid',
+}) => {
+  const baseClasses = 'inline-flex items-center px-4 py-2 border shadow-sm text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const colorClass = variant === 'solid' ? colorClasses[color] : colorClasses[color].replace('bg-', 'border-').replace('text-white', 'text-current');
+  const variantClass = variantClasses[variant];
+
+  return (
+    <button
+      className={`${baseClasses} ${colorClass} ${variantClass}`}
+      onClick={onClick}
+    >
+      {startIcon && <span className="mr-2">{startIcon}</span>}
+      {children}
+      {endIcon && <span className="ml-2">{endIcon}</span>}
+    </button>
+  );
+};
 
 export default Button;
+
