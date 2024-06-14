@@ -16,16 +16,23 @@ const Template: StoryFn<typeof DualMultiSelect> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   items: [
-    { id: 1, name: "Super Admin" },
-    { id: 2, name: "Auditor General" },
-    { id: 3, name: "Janitor" },
+    { id: 1, name: "Elixir" },
+    { id: 2, name: "Golang" },
+    { id: 3, name: "Ruby on Rails" },
+    { id: 4, name: "React" },
+    { id: 5, name: "Vuejs" },
+    { id: 6, name: "Angular" },
+    { id: 7, name: "Bash" },
+    { id: 8, name: "C#" },
+    { id: 9, name: "Java" },
+    { id: 12, name: "Python" },
   ],
   selectedItems: [
-    { id: 4, name: "Investigator" },
-    { id: 5, name: "Accountant" },
+    { id: 10, name: "Rust" },
+    { id: 11, name: "Haskell" },
   ],
-  label: "Available Items",
-  rightLabel: "Selected Items",
-  filterLabel: "Search Items...",
+  label: "Available Languages",
+  rightLabel: "Selected Languages",
+  filterLabel: "filter languages...",
   onAddRemove: (items) => console.log("Items changed:", items),
 };

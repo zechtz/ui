@@ -208,7 +208,7 @@ const DualMultiSelect: FC<Props> = (props) => {
 
       <div className="flex flex-row justify-between items-start flex-grow mt-0">
         <div className="flex flex-col w-[48%]">
-          <span className="text-gray-500 py-1 uppercase font-semibold">
+          <span className="text-gray-500 py-1 font-semibold">
             {label}
           </span>
           <select
@@ -264,7 +264,7 @@ const DualMultiSelect: FC<Props> = (props) => {
         </div>
 
         <div className="flex flex-col w-[48%]">
-          <span className="text-gray-500 py-1 uppercase font-semibold">
+          <span className="text-gray-500 py-1 font-semibold">
             {rightLabel}
           </span>
           <select
