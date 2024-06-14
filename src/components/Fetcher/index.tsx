@@ -56,7 +56,7 @@ const Fetcher = <T, P>({
   api,
   render,
   defaultParams,
-  loadingLabel,
+  loadingLabel = "Loading data...",
   searchTerm = "",
 }: Props<T, P>): JSX.Element => {
   const [response, setResponse] = useState<Response<T>>(RESPONSE_PARAMS);
@@ -97,7 +97,7 @@ const Fetcher = <T, P>({
   if (loadingLabel && response.loading) {
     return (
       <span>
-        Loading {typeof loadingLabel === "boolean" ? "" : loadingLabel}...
+        {typeof loadingLabel === "boolean" ? "" : loadingLabel}...
       </span>
     );
   }
