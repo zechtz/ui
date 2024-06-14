@@ -17,6 +17,6 @@ const Template: StoryFn<LanguageSwitcherProps> = (args) => <LanguageSwitcher {..
 
 export const Default = Template.bind({});
 Default.args = {
-  initialLanguage: 'Português',
+  initialLanguage: 'Swahili',
 };
 

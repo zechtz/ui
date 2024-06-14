@@ -1,6 +1,5 @@
 import { useState, FC } from 'react';
 import { FaCheck, FaChevronDown } from 'react-icons/fa';
-import "flag-icons/css/flag-icons.min.css";
 
 const languages = [
   { code: 'en', name: 'English' },
@@ -9,13 +8,14 @@ const languages = [
   { code: 'it', name: 'Italiano' },
   { code: 'pt', name: 'Português' },
   { code: 'sv', name: 'Svenska' },
+  { code: 'sw', name: 'Swahili' },
 ];
 
 export interface LanguageSwitcherProps {
   initialLanguage?: string;
 }
 
-const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ initialLanguage = 'Português' }) => {
+const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ initialLanguage = 'Swahili' }) => {
   const [selectedLanguage, setSelectedLanguage] = useState(initialLanguage);
   const [isOpen, setIsOpen] = useState(false);
 
