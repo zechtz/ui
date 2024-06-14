@@ -38,5 +38,22 @@ export default {
     {
       pattern: /gap-\d+/,
     },
+    {
+      pattern: /flex-(row|col)/,
+    },
+    {
+      pattern: /justify-(start|center|end|between|around|evenly)/,
+    },
+    {
+      pattern: /items-(start|center|end|baseline|stretch)/,
+    },
+    {
+      pattern:
+        /(flex|justify|items|gap)-(row|col|start|center|end|between|around|evenly|baseline|stretch|\d+)(-(sm|md|lg|xl|2xl))?/,
+    },
+    {
+      pattern: /^(stroke|text)-/,
+      variants: ["responsive", "hover", "focus", "active"],
+    },
   ],
 };
