@@ -52,7 +52,8 @@ export default {
         /(flex|justify|items|gap)-(row|col|start|center|end|between|around|evenly|baseline|stretch|\d+)(-(sm|md|lg|xl|2xl))?/,
     },
     {
-      pattern: /^(stroke|text)-/,
+      pattern:
+        /^(stroke|text|w|h)-(gray|red|yellow|green|blue|indigo|purple|pink|black|white|current|transparent|[0-9]+)-[0-9]{1,3}$/,
       variants: ["responsive", "hover", "focus", "active"],
     },
   ],
