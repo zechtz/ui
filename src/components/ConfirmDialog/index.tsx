@@ -23,13 +23,13 @@ const iconMap = {
 const variantStyles = {
   info: "bg-blue-100 text-blue-600",
   warn: "bg-yellow-100 text-yellow-600",
-  error: "bg-red-100 text-red-600",
+  error: "bg-rose-100 text-rose-600",
 };
 
 const buttonStyles = {
   info: "bg-blue-600 hover:bg-blue-700 focus:ring-blue-500",
   warn: "bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500",
-  error: "bg-red-600 hover:bg-red-700 focus:ring-red-500",
+  error: "bg-rose-600 hover:bg-rose-700 focus:ring-rose-500",
 };
 
 const ConfirmDialog: FC<ConfirmDialogProps> = ({
